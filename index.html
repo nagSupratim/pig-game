@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+      <img src="./assets/images/dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+
+    <div class="footer footer-links">
+      <div class="footer-link">
+        <a href="https://www.linkedin.com/in/nagsupratim/"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+      </div>
+      <div class="footer-link">
+        <a href="https://github.com/nagSupratim/pig-game"
+          ><i class="bx bxl-github"></i
+        ></a>
+      </div>
+      <div class="footer-link">
+        <a href="mailto:supratimnag1997@gmail.com"
+          ><i class="bx bx-mail-send"></i
+        ></a>
+      </div>
+    </div>
+    <div class="footer footer-icon">
+      <div class="rules-icon">
+        <i class="bx bx-question-mark"></i>
+      </div>
+    </div>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h2 class="instruction-heading">How to Play !</h2>
+      <ul class="instruction-list">
+        <li class="single-instruction">Game starts with Player 1</li>
+        <li class="single-instruction">
+          A Player can roll the dice, for consecutive rolls the scores will be
+          added to CURRENT
+        </li>
+        <li class="single-instruction">
+          If any player encounters one, then he/she will losse all CURRENT
+          points and active player will be switched
+        </li>
+        <li class="single-instruction">
+          To add CURRENT score to main SCORE, user can hold, this way the
+          CURRENT score gets added to main SCORE
+        </li>
+        <li class="single-instruction">
+          This way first to reach 100 points will be the Winner 🥳
+        </li>
+      </ul>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
